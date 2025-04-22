@@ -20,11 +20,10 @@
             const userInfo = getUserInfo(); // Get user info from auth.js
             const userInfoDiv = document.getElementById("user-info");
 
-            if (loginPrompt) loginPrompt.style.display = "block";
             if (!userInfo) {
                 // User is not logged in, show the login prompt and hide the registration
                 if (userInfoDiv) userInfoDiv.style.display = "none";
-                if (loginPrompt) loginPrompt.style.display = "block";
+                if (loginPrompt) loginPrompt.style.display = "block"; // Ensure this line is executed
             } else {
                 // User is logged in, hide the login prompt and display the registration
                 if (loginPrompt) loginPrompt.style.display = "none";
@@ -49,7 +48,7 @@
                                              <div id="racing-events" style="display: block;"></div>
                                              <div id="field-events" style="display: block;"></div>
                                              <br>
-                                             <button id="submit-btn">Submit</button>`;
+                                             <button id="submit-btn" class="small-submit-btn">Submit</button>`;
 
                     const sportsGroupDiv = document.getElementById("sports-group");
                     sportsGroupDiv.style.display = "block";
@@ -166,7 +165,7 @@
     <main>
         <h1>Event Registration</h1>
         Please <b>login with your Carmail account</b> to continue with your registration
-        <div id="loginPrompt">Please <b>login with your Carmail account</b> to continue with your registration</div>
+        <div id="loginPrompt" style="display: block;">Please <b>login with your Carmail account</b> to continue with your registration</div>
         <div id="user-info" style="display: none;"></div>
     </main>
 

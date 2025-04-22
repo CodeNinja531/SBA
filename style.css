@@ -136,3 +136,19 @@ main.collapsed {
     border-radius: 5px;
     z-index: 1000;
 }
+
+/* Styles for small submit button */
+.small-submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-submit-btn:hover {
+    background-color: #218838;
+}
